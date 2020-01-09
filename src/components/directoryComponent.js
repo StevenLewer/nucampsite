@@ -3,10 +3,6 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
 
 class Directory extends Component {
-
-
-
-
     render() {
         const directory = this.props.campsites.map(campsite => {
             return (
