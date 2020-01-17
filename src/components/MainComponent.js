@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Directory from './directoryComponent';
 import CampsiteInfo from './campsiteInfoComponent';
+import About from './AboutComponent'
 import { CAMPSITES } from '../shared/campsites';
 import { COMMENTS } from '../shared/comments';
 import { PARTNERS } from '../shared/partners';
@@ -50,6 +51,7 @@ class Main extends Component {
                     <Route path='/directory/:campsiteId' component={CampsiteWithId} />
                     <Route exact path='/directory' render={() => <Directory campsites={this.state.campsites} />} />
                     <Route exact path='/contactus' component={Contact} />
+                    <Route path='/aboutus' render={() => <About partners={this.state.partners} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
